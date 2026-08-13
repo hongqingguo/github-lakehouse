@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
+*.pem
+*.key
+
+# Data
+scratch/
+data/
+*.log
+
+# IDE
+.vscode/
+.idea/
