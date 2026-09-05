@@ -34,6 +34,7 @@ def build_spark() -> pyspark.sql.SparkSession:
         .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension")
         .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")
         .config("spark.sql.shuffle.partitions", "8")
+        .config("spark.local.dir", "/users/hguo55/scratch/github-lakehouse/spark-local")
     )
     return configure_spark_with_delta_pip(builder).getOrCreate()
 
